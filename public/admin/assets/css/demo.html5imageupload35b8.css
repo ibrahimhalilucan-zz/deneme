@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+html, body						{ font-family: arial; }
+
+.dropzone2						{ background-color: #eeeeee; text-align: center; position: relative; border: 1px solid #dddddd; display: inline-block;  }
+.dropzone2:after					{ content: 'Drop your image here or click to add one!'; font-size: 30px; color: #bbbbbb; position: absolute; bottom: 60%; left: 0; width: 100%; text-align: center; z-index:0;}
+.dropzone2:before				{ content: ''; font-family:"Glyphicons Halflings"; font-size: 60px; color: #dbdbdb; position: absolute; top: 40%; left: 0; width: 100%; text-align: center; z-index:0;}
+
+/*[data-i18n]::after {
+   content: attr(data-i18n);
+}*/
+
+.dropzone2.loading:after			{ content: 'Please wait, image is loading'; }
+.dropzone2.loading:before		{ content: ''; }
+
+.dropzone2.done:after			{ content: '';}
+.dropzone2.done:before			{ content: '';}
+
+/* not an image */
+.dropzone2.notAnImage			{ background-color: #f2dede; border-color: #ebccd1; }
+.dropzone2.notAnImage:after		{ content: 'The selected file is not an image!'; color: #a94442; }
+.dropzone2.notAnImage:before		{ content: ''; color: #ebccd1; }
+
+.dropzone2.alert-danger			{ background-color: #f2dede; }
+.dropzone2.alert-danger:after	{ content: ''; }
+
+.dropzone2.smalltext:after		{ font-size: 20px; }
+
+.dropzone2 > span				{ font-size: 30px; color: #bbbbbb; position: absolute; top: 35%; left: 0; width: 100%; text-align: center; z-index:0;}
+.dropzone2 > span.loader			{ display: none; }
+.dropzone2 > input[type=file]	{ position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; opacity: 0; cursor: pointer; z-index:2; height: 100% /* IE HACK*/ }
+.dropzone2 > input[type=text]	{ display: none; }
+
+.dropzone2 .progress				{ bottom: 10px; left: 10px; right: 10px; display: none;  }
+
+.dropzone2 .cropWrapper			{ overflow: hidden; position: absolute; top:0; bottom: 0; left: 0; right: 0; z-index: 10; background-color: #eeeeee; text-align: left;}
+/*.dropzone2 canvas.final			{ background-color: #eeeeee;}*/
+
+.dropzone2 img					{ z-index: 5; position: relative; }
+.dropzone2 img.ghost				{ opacity: .2; z-index: auto; float:left /* HACK for not scrolling*/; }
+.dropzone2 img.main				{ cursor: move; }
+.dropzone2 .final img.main 		{ cursor: auto; }
+.dropzone2 img.preview			{ width: 100%; }
+
+
+.dropzone2 canvas					{ z-index: 5; position: relative; }
+.dropzone2 canvas.ghost				{ opacity: .2; z-index: auto; float:left /* HACK for not scrolling*/; }
+.dropzone2 canvas.main				{ cursor: move; }
+.dropzone2 .final canvas.main 		{ cursor: auto; }
+.dropzone2 canvas.h5iu_preview			{ width: 100%; }
+
+.dropzone2 .tools				{ position: absolute; top: 10px; right: 10px; z-index: 999; display: inline-block; }
+.dropzone2 .tools > *			{ margin: 0 0 0 5px; }
+
+.dropzone2.smalltools .tools .btn	{ padding: 1px 4px; font-size: 12px; }
+
+.dropzone2 .download				{ position: absolute; bottom: 10px; left: 10px; z-index: 999; display: inline-block; }
+.dropzone2 .download > *			{ margin: 0 0 0 5px; }
+
+.dropzone2 .alert				{ z-index: 100; position: absolute; bottom: 0px; left: 20px; right: 20px; }
+
+.icon-flipped 					{ transform: scaleX(-1); -moz-transform: scaleX(-1); -webkit-transform: scaleX(-1); -ms-transform: scaleX(-1); }
+
+.rotate_90						{ /*General*/
+transform: rotate(90deg);
+/*Firefox*/
+-moz-transform: rotate(90deg);
+/*Microsoft Internet Explorer*/
+-ms-transform: rotate(90deg);
+/*Chrome, Safari*/
+-webkit-transform: rotate(90deg);
+/*Opera*/
+-o-transform: rotate(90deg);}
+.html5imageupload						{ background-color: #eeeeee; text-align: center; position: relative; border: 1px solid #dddddd; display: inline-block;  }
+.html5imageupload:after					{ content: 'Drop your image here or click to add one!'; font-size: 30px; color: #bbbbbb; position: absolute; bottom: 60%; left: 0; width: 100%; text-align: center; z-index:0;}
+.html5imageupload:before				{ content: ''; font-family:"Glyphicons Halflings"; font-size: 60px; color: #dbdbdb; position: absolute; top: 40%; left: 0; width: 100%; text-align: center; z-index:0;}
+
+.html5imageupload.loading:after			{ content: 'Please wait, image is loading'; }
+.html5imageupload.loading:before		{ content: ''; }
+
+.html5imageupload.done:after			{ content: '';}
+.html5imageupload.done:before			{ content: '';}
+
+/* not an image */
+.html5imageupload.notAnImage			{ background-color: #f2dede; border-color: #ebccd1; }
+.html5imageupload.notAnImage:after		{ content: 'The selected file is not an image!'; color: #a94442; }
+.html5imageupload.notAnImage:before		{ content: ''; color: #ebccd1; }
+
+.html5imageupload.alert-danger			{ background-color: #f2dede; }
+.html5imageupload.alert-danger:after	{ content: ''; }
+
+.html5imageupload.smalltext:after		{ font-size: 20px; }
+
+.html5imageupload > span				{ font-size: 30px; color: #bbbbbb; position: absolute; top: 35%; left: 0; width: 100%; text-align: center; z-index:0;}
+.html5imageupload > span.loader			{ display: none; }
+.html5imageupload > input[type=file]	{ position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; opacity: 0; cursor: pointer; z-index:2; height: 100% /* IE HACK*/ }
+.html5imageupload > input[type=text]	{ display: none; }
+
+.html5imageupload .progress				{ bottom: 10px; left: 10px; right: 10px; display: none;  }
+
+.html5imageupload .cropWrapper			{ overflow: hidden; position: absolute; top:0; bottom: 0; left: 0; right: 0; z-index: 10; background-color: #eeeeee}
+/*.html5imageupload canvas.final			{ background-color: #eeeeee;}*/
+
+.html5imageupload img					{ z-index: 20; position: relative; }
+.html5imageupload img.ghost				{ opacity: .2; z-index: auto; float:left /* HACK for not scrolling*/; }
+.html5imageupload img.main				{ cursor: move; }
+.html5imageupload .final img.main 		{ cursor: auto; }
+.html5imageupload img.h5iu_preview			{ width: 100%; }
+
+.html5imageupload .tools				{ position: absolute; top: 10px; right: 10px; z-index: 999; display: inline-block; }
+.html5imageupload .tools > *			{ margin: 0 0 0 5px; }
+
+.html5imageupload .download				{ position: absolute; bottom: 10px; left: 10px; z-index: 999; display: inline-block; }
+.html5imageupload .download > *			{ margin: 0 0 0 5px; }
+
+
+.html5imageupload.smalltools .tools .btn	{ padding: 1px 4px; font-size: 12px; }

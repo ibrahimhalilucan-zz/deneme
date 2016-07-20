@@ -1,0 +1,25 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+body {
+	
+}
+
+.plr0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sayfabaslik{
+    padding-left: 15px;
+}
+
+.pb25{
+    padding-bottom: 25px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
